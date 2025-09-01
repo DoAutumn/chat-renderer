@@ -1,0 +1,5 @@
+<div class="media-container">
+  <video *ngIf="data.flag === 'video'" [src]="data.content[0].src" controls></video>
+  <audio *ngIf="data.flag === 'audio'" [src]="data.content[0].src" controls></audio>
+  <p>{{ data.content[0].title }}</p>
+</div>

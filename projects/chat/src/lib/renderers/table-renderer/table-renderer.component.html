@@ -1,0 +1,15 @@
+<table *ngFor="let item of data.content">
+  <thead>
+    <tr>
+      <th *ngFor="let col of item.columns">{{ col.title || col.key }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of item.data">
+      <td *ngFor="let col of item.columns" [ngStyle]="style(col, row)" [ngClass]="clzss(col, row)"
+        [attr.data-oper]="dataOper(col, row)">
+        {{ row[col.key] }}
+      </td>
+    </tr>
+  </tbody>
+</table>

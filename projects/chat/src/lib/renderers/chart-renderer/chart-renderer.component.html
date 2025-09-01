@@ -1,0 +1,3 @@
+<div *ngFor="let chart of data.content" class="chart-box">
+  <div tCharts [chartName]="chart.chartName" [dataCfg]="chart.dataConfig" [styleCfg]="chartStyleCfg"></div>
+</div>

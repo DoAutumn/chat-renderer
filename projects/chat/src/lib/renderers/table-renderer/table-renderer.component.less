@@ -1,0 +1,90 @@
+table {
+  width: 100%;
+  min-width: 400px;
+  font-size: 12px;
+  font-family: inherit;
+  line-height: 1.5715;
+  border: 1px solid rgba(0, 0, 0, .06);
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 5px 0;
+
+  tr:nth-child(2n) {
+    background-color: #f7f8fa;
+  }
+
+  th {
+    color: var(--text-color-secondary);
+    font-weight: normal;
+    white-space: nowrap;
+    padding: 4px 12px;
+    text-align: left;
+    background-color: #f7f6f6;
+  }
+
+  td {
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, .06);
+    padding: 4px 12px;
+    border-color: #0000000f;
+    border-width: 1px 0;
+    color: var(--text-color-secondary);
+
+    &:first-child {
+      color: var(--text-color-secondary);
+      font-weight: inherit;
+    }
+
+    &.ui-copilot-interactive {
+      cursor: pointer;
+
+      // 2024-0510 根据html结构来看，td中只有文本信息，无需设置inline-flex，记不清当初为啥要设置这个样式了
+      // display: inline-flex;
+      // align-items: center;
+      &.navigate {
+        color: #3a52e6;
+
+        &:hover {
+          color: #5068f7;
+        }
+      }
+
+      &.refresh {
+        color: #3a52e6;
+        text-decoration: underline;
+
+        &:hover {
+          color: #5068f7;
+        }
+      }
+
+      &.dialog {
+        color: #3a52e6;
+        text-decoration: underline;
+        font-style: italic;
+
+        &:hover {
+          color: #5068f7;
+        }
+      }
+
+      &.menus {
+        color: #3a52e6;
+        font-weight: bolder;
+
+        &:hover {
+          color: #5068f7;
+        }
+      }
+
+      &.portrait {
+        color: #278fe7;
+        text-decoration: underline;
+
+        &:hover {
+          color: #25b696;
+        }
+      }
+    }
+  }
+}
